@@ -1,0 +1,13 @@
+name: Run Lint
+
+on: pull_request
+
+jobs:
+  run-lint:
+    name: Run Linter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: yarn lint
