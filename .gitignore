@@ -141,4 +141,12 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
-# End of https://www.toptal.com/developers/gitignore/api/node
+## Mac OS stuff
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+*.icloud
+
+# Thumbnails
+._*
