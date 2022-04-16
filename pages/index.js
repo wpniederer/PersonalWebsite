@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-            My name is Walt Niederer, I'm a Senior Platform Engineer at ConsumerTrack and this is my website for trying out stuff I'm interested in!
+            My name is Walt Niederer, I&apos;m a Senior Platform Engineer at ConsumerTrack and this is my website for trying out stuff I&apos;m interested in!
         </p>
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
