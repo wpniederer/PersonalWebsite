@@ -21,6 +21,12 @@ export default function Footer() {
             >
               Walt@Email
             </a>
+            <a
+              href={`https://www.linkedin.com/in/walter-niederer/`}
+              className="mx-3 font-bold hover:underline"
+            >
+              Walt@LinkedIn
+            </a>
           </div>
         </div>
       </Container>
