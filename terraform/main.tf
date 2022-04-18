@@ -1,14 +1,23 @@
-variable "org_id" {
+variable "scalr_org_id" {
   type = string
+}
+
+variable "scalr_hostname" {
+  type = string
+}
+
+variable "scalr_workspace_name" {
+  type    = string
+  default = "PersonalWebsite Prod"
 }
 
 terraform {
   backend "remote" {
-    hostname     = "wpniederer.scalr.io"
-    organization = var.org_id
+    hostname     = var.scalr_hostname
+    organization = var.scalr_org_id
 
     workspaces {
-      name = "PersonalWebsite"
+      name = var.scalr_workspace_name
     }
   }
 }
