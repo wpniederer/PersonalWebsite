@@ -150,3 +150,6 @@ dist
 
 # Thumbnails
 ._*
+
+# Terraform
+.terraform
