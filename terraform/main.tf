@@ -8,7 +8,7 @@ variable "scalr_hostname" {
 
 variable "scalr_workspace_name" {
   type    = string
-  default = "PersonalWebsite Prod"
+  default = "Prod"
 }
 
 terraform {
