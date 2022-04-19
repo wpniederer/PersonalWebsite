@@ -152,4 +152,4 @@ dist
 ._*
 
 # Terraform
-.terraform
+.terraform*
