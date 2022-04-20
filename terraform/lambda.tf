@@ -15,7 +15,7 @@ resource "aws_lambda_function" "personal_website" {
   source_code_hash = data.aws_s3_object.personal_website_function_hash.body
 
   runtime = "nodejs14.x"
-  handler = "node_modules/next-serverless/lib/server.handler"
+  handler = "node_modules/nextjs12-serverless/lib/server.handler"
 
 
 

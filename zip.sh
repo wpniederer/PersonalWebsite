@@ -21,7 +21,7 @@ cd  app-package
 yarn
 
 # zip packages
-zip -qr ../app-package-$TAG.zip .next/ node_modules/ src/ next.config.js package.json
+zip -qr ../app-package-$TAG.zip *
 cd ..
 openssl dgst -sha256 -binary app-package-$TAG.zip | openssl enc -base64 | tr -d "\n" > app-package-$TAG.zip.base64sha256
 
