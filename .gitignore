@@ -153,3 +153,6 @@ dist
 
 # Terraform
 .terraform*
+
+# Etc
+app-package*
