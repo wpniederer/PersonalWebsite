@@ -1,4 +1,5 @@
-import Link from 'next/link'
+// import Link from 'next/link'
+import Link from 'nextjs12-serverless/link'
 import { MY_NAME } from '../lib/constants'
 
 export default function Header() {

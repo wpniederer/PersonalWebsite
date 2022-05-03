@@ -1,5 +1,6 @@
 import cn from 'classnames'
-import Link from 'next/link'
+//  import Link from 'next/link'
+import Link from 'nextjs12-serverless/link'
 import Image from 'next/image'
 
 export default function CoverImage({ title, src, slug, height, width }) {
