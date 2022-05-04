@@ -89,6 +89,7 @@ web_modules/
 
 # Next.js build output
 .next
+.next-tf
 out
 
 # Nuxt.js build / generate output
@@ -150,3 +151,6 @@ dist
 
 # Thumbnails
 ._*
+
+# Terraform
+.terraform*

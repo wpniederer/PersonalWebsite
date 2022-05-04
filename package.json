@@ -4,13 +4,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "tf-next": "tf-next build",
     "lint": "next lint"
   },
   "dependencies": {
     "classnames": "2.3.1",
     "date-fns": "^2.28.0",
     "gray-matter": "^4.0.3",
-    "next": "latest",
+    "next": "^12.1.5",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "remark": "^14.0.2",
@@ -21,6 +22,7 @@
     "eslint": "^8.13.0",
     "eslint-config-next": "^11.1.2",
     "postcss": "^8.4.7",
-    "tailwindcss": "^3.0.23"
+    "tailwindcss": "^3.0.23",
+    "tf-next": "^0.12.2"
   }
 }
