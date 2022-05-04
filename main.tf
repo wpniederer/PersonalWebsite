@@ -1,13 +1,4 @@
 terraform {
-  backend "remote" {
-    hostname     = "wpniederer.scalr.io"
-    organization = "env-u0grbkhnofp78lo"
-
-    workspaces {
-      name = "CLI"
-    }
-  }
-
   required_providers {
     aws = {
       source  = "hashicorp/aws"
