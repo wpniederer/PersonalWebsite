@@ -144,11 +144,6 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.3.tgz#6801033be7ff87a6b7cadaf5b337c9f366a3c4b0"
   integrity sha512-WiBSI6JBIhC6LRIsB2Kwh8DsGTlbBU+mLRxJmAe3LjHTdkDpwIbEOZgoXBbZilk/vlfjK8i6nKRAvIRn1XaIMw==
 
-"@types/aws-lambda@^8.10.19":
-  version "8.10.93"
-  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.93.tgz#3e2c80894122477040aabf29b7320556f5702a76"
-  integrity sha512-Vsyi9ogDAY3REZDjYnXMRJJa62SDvxHXxJI5nGDQdZW058dDE+av/anynN2rLKbCKXDRNw3D/sQmqxVflZFi4A==
-
 "@types/debug@^4.0.0":
   version "4.1.7"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.7.tgz#7cc0ea761509124709b8b2d1090d8f6c17aadb82"
@@ -1797,13 +1792,6 @@ next@latest:
     "@next/swc-win32-ia32-msvc" "12.1.5"
     "@next/swc-win32-x64-msvc" "12.1.5"
 
-nextjs12-serverless@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/nextjs12-serverless/-/nextjs12-serverless-1.0.1.tgz#3a11df482b6aab428714a050ffb33c458d4c0c4a"
-  integrity sha512-gsrLAAXGrMO/BcDUV9RqRxynIx9kf2wwTa0cEWlJ2OmIRdUzWkG3aogpy8R3VFyqmfJdecyKsFnKH4Ob+Kbcag==
-  dependencies:
-    serverless-http "^1.6.0"
-
 node-releases@^2.0.2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.3.tgz#225ee7488e4a5e636da8da52854844f9d716ca96"
@@ -2213,13 +2201,6 @@ semver@^7.3.5:
   integrity sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==
   dependencies:
     lru-cache "^6.0.0"
-
-serverless-http@^1.6.0:
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/serverless-http/-/serverless-http-1.10.1.tgz#e604fbef55ecd991fdbb7d1130b4d34dad8a0428"
-  integrity sha512-6DEaM8izBg05rP4JfDWVJmzpTbXcVa1lGLOfj7ODtjOJ98hb1gbYI8m/91XERUUNUvP1KeBzxtiJiTU+v7Jgzg==
-  optionalDependencies:
-    "@types/aws-lambda" "^8.10.19"
 
 shebang-command@^2.0.0:
   version "2.0.0"
