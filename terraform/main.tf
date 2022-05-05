@@ -41,7 +41,7 @@ provider "aws" {
 module "tf_next" {
   source = "milliHQ/next-js/aws"
 
-  # next_tf_dir = var.next_tf_dir
+  next_tf_dir     = var.next_tf_dir
   deployment_name = var.app_name
   lambda_runtime  = "nodejs14.x"
   tags            = var.tags
@@ -62,7 +62,7 @@ provider "aws" {
 
 variable "next_tf_dir" {
   type    = string
-  default = "../.next-tf"
+  default = "../.next-tf/"
 
 }
 
