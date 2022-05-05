@@ -34,6 +34,11 @@ variable "tags" {
   }
 }
 
+variable "cloudfront_alias" {
+  type    = list(string)
+  default = ["walt.dev"]
+}
+
 provider "aws" {
   region = "us-west-2"
 }
@@ -41,10 +46,13 @@ provider "aws" {
 module "tf_next" {
   source = "milliHQ/next-js/aws"
 
-  next_tf_dir     = var.next_tf_dir
-  deployment_name = var.app_name
-  lambda_runtime  = "nodejs14.x"
-  tags            = var.tags
+  next_tf_dir                         = var.next_tf_dir
+  deployment_name                     = var.app_name
+  lambda_runtime                      = "nodejs14.x"
+  tags                                = var.tags
+  cloudfront_minimum_protocol_version = "TLSv1.2_2021"
+  cloudfront_aliases                  = var.cloudfront_alias
+  cloudfront_acm_certificate_arn      = module.cloudfront_cert.acm_certificate_arn
 
   providers = {
     aws.global_region = aws.global_region
@@ -76,8 +84,6 @@ variable "custom_domain" {
   default     = "walt.dev"
 }
 
-# Assuming that the ZONE of your domain is already registrated in your AWS account (Route 53)
-# https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/AboutHZWorkingWith.html
 variable "custom_domain_zone_name" {
   description = "The Route53 zone name of the custom domain"
   type        = string
@@ -98,12 +104,10 @@ locals {
 # Route53 Domain record
 #######################
 
-# Get the hosted zone for the custom domain
 data "aws_route53_zone" "custom_domain_zone" {
   name = var.custom_domain_zone_name
 }
 
-# Create a new record in Route 53 for the domain
 resource "aws_route53_record" "cloudfront_alias_domain" {
   for_each = toset(local.aliases)
 
@@ -122,9 +126,6 @@ resource "aws_route53_record" "cloudfront_alias_domain" {
 # SSL Cert
 ##########
 
-# Creates a free SSL certificate for CloudFront distribution
-# For more options (e.g. multiple domains) see:
-# https://registry.terraform.io/modules/terraform-aws-modules/acm/aws/
 module "cloudfront_cert" {
   source  = "terraform-aws-modules/acm/aws"
   version = "~> 3.0"
@@ -137,7 +138,6 @@ module "cloudfront_cert" {
     Name = "CloudFront ${var.custom_domain}"
   }
 
-  # CloudFront works only with certs stored in us-east-1
   providers = {
     aws = aws.global_region
   }
