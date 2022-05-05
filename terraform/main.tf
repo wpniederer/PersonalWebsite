@@ -34,6 +34,11 @@ variable "tags" {
   }
 }
 
+variable "cloudfront_alias" {
+  type    = list(string)
+  default = ["walt.dev"]
+}
+
 provider "aws" {
   region = "us-west-2"
 }
@@ -41,10 +46,13 @@ provider "aws" {
 module "tf_next" {
   source = "milliHQ/next-js/aws"
 
-  next_tf_dir     = var.next_tf_dir
-  deployment_name = var.app_name
-  lambda_runtime  = "nodejs14.x"
-  tags            = var.tags
+  next_tf_dir                         = var.next_tf_dir
+  deployment_name                     = var.app_name
+  lambda_runtime                      = "nodejs14.x"
+  tags                                = var.tags
+  cloudfront_minimum_protocol_version = "TLSv1.2_2021"
+  cloudfront_aliases                  = var.cloudfront_alias
+  cloudfront_acm_certificate_arn      = module.cloudfront_cert.acm_certificate_arn
 
   providers = {
     aws.global_region = aws.global_region
