@@ -30,7 +30,7 @@ variable "tags" {
   type = map(string)
   default = {
     AppName = "personal-website"
-    Version = "0.0.1"
+    Version = "1.0.0"
   }
 }
 
