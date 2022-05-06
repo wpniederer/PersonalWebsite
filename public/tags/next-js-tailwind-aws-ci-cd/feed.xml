@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Walt&#39;s Blog</title>
+      <link>https://walt.dev/blog</link>
+      <description>Just trying out fun and interesting tech</description>
+      <language>en-us</language>
+      <managingEditor>wpniederer@gmail.com (Walt Niederer)</managingEditor>
+      <webMaster>wpniederer@gmail.com (Walt Niederer)</webMaster>
+      <lastBuildDate>Thu, 05 May 2022 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://walt.dev/tags/next-js-tailwind-aws-ci-cd/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://walt.dev/blog/about-this-site</guid>
+    <title>About this site</title>
+    <link>https://walt.dev/blog/about-this-site</link>
+    <description>Talking about my goals for this site, as well as how initially planning to build it.</description>
+    <pubDate>Thu, 05 May 2022 00:00:00 GMT</pubDate>
+    <author>wpniederer@gmail.com (Walt Niederer)</author>
+    <category>next-js tailwind aws ci-cd</category>
+  </item>
+
+    </channel>
+  </rss>
