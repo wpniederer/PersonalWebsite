@@ -25,10 +25,6 @@
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/canada</loc>
-  </url>
-
-  <url>
     <loc>https://walt.dev/tags/book</loc>
   </url>
 
@@ -37,7 +33,7 @@
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/code</loc>
+    <loc>https://walt.dev/tags/canada</loc>
   </url>
 
   <url>
@@ -53,15 +49,15 @@
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/holiday</loc>
-  </url>
-
-  <url>
     <loc>https://walt.dev/tags/guide</loc>
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/images</loc>
+    <loc>https://walt.dev/tags/code</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/holiday</loc>
   </url>
 
   <url>
@@ -81,15 +77,19 @@
   </url>
 
   <url>
+    <loc>https://walt.dev/tags/images</loc>
+  </url>
+
+  <url>
     <loc>https://walt.dev/tags/next-js-tailwind-aws-ci-cd</loc>
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/ols</loc>
+    <loc>https://walt.dev/tags/reflection</loc>
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/reflection</loc>
+    <loc>https://walt.dev/tags/ols</loc>
   </url>
 
   <url>
