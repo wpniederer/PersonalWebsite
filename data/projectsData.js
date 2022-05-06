@@ -5,7 +5,7 @@ const projectsData = [
     Read more details about the frameworks, tools, hosting solution, and infrastructure
     down below!`,
     imgSrc: '/static/images/my_blog.png',
-    href: '/blog/about-site',
+    href: '/blog/about-this-site',
   },
   {
     title: 'Chatbot - WIP',

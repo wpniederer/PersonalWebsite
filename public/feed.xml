@@ -20,25 +20,5 @@
     <category>next-js</category><category>tailwind</category><category>aws</category><category>CI/CD</category>
   </item>
 
-  <item>
-    <guid>https://walt.dev/blog/nested-route/introducing-multi-part-posts-with-nested-routing</guid>
-    <title>Introducing Multi-part Posts with Nested Routing</title>
-    <link>https://walt.dev/blog/nested-route/introducing-multi-part-posts-with-nested-routing</link>
-    <description>The blog template supports posts in nested sub-folders. This can be used to group posts of similar content e.g. a multi-part course. This post is itself an example of a nested route!</description>
-    <pubDate>Sun, 02 May 2021 00:00:00 GMT</pubDate>
-    <author>wpniederer@gmail.com (Walt Niederer)</author>
-    <category>multi-author</category><category>next-js</category><category>feature</category>
-  </item>
-
-  <item>
-    <guid>https://walt.dev/blog/github-markdown-guide</guid>
-    <title>Markdown Guide</title>
-    <link>https://walt.dev/blog/github-markdown-guide</link>
-    <description>Markdown cheatsheet for all your blogging needs - headers, lists, images, tables and more! An illustrated guide based on GitHub Flavored Markdown.</description>
-    <pubDate>Fri, 11 Oct 2019 00:00:00 GMT</pubDate>
-    <author>wpniederer@gmail.com (Walt Niederer)</author>
-    <category>github</category><category>guide</category>
-  </item>
-
     </channel>
   </rss>
