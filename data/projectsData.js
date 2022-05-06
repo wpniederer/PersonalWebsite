@@ -1,19 +1,17 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
+    title: 'This Blog!',
+    description: ` This blog itself is a project I've wanted to do for a long time.
+    Read more details about the frameworks, tools, hosting solution, and infrastructure
+    down below!`,
     imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    href: '/blog/about-site',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'Chatbot - WIP',
+    description: ` Comin soon....`,
+    imgSrc: '/static/images/bot.png',
+    href: '',
   },
 ]
 
