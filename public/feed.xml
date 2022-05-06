@@ -7,9 +7,19 @@
       <language>en-us</language>
       <managingEditor>wpniederer@gmail.com (Walt Niederer)</managingEditor>
       <webMaster>wpniederer@gmail.com (Walt Niederer)</webMaster>
-      <lastBuildDate>Sat, 07 Aug 2021 15:32:14 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 05 May 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://walt.dev/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://walt.dev/blog/about-this-site</guid>
+    <title>About this site</title>
+    <link>https://walt.dev/blog/about-this-site</link>
+    <description>Talking about my goals for this site, as well as how initially planning to build it.</description>
+    <pubDate>Thu, 05 May 2022 00:00:00 GMT</pubDate>
+    <author>wpniederer@gmail.com (Walt Niederer)</author>
+    <category>next-js</category><category>tailwind</category><category>aws</category><category>CI/CD</category>
+  </item>
+
   <item>
     <guid>https://walt.dev/blog/new-features-in-v1</guid>
     <title>New features in v1</title>
