@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://walt.dev/about</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/blog</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/projects</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/aws</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/canada</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/cicd</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/book</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/feature</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/features</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/code</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/github</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/guide</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/holiday</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/markdown</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/math</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/multi-author</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/next-js</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/images</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/next-js-tailwind-aws-ci-cd</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/ols</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/reflection</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/tailwind</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/writings</loc>
+  </url>
+</urlset>
