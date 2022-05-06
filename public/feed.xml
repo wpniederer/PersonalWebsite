@@ -1,0 +1,44 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Walt&#39;s Blog</title>
+      <link>https://walt.dev/blog</link>
+      <description>Just trying out fun and interesting tech</description>
+      <language>en-us</language>
+      <managingEditor>wpniederer@gmail.com (Walt Niederer)</managingEditor>
+      <webMaster>wpniederer@gmail.com (Walt Niederer)</webMaster>
+      <lastBuildDate>Thu, 05 May 2022 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://walt.dev/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://walt.dev/blog/about-this-site</guid>
+    <title>About this site</title>
+    <link>https://walt.dev/blog/about-this-site</link>
+    <description>Talking about my goals for this site, as well as how initially planning to build it.</description>
+    <pubDate>Thu, 05 May 2022 00:00:00 GMT</pubDate>
+    <author>wpniederer@gmail.com (Walt Niederer)</author>
+    <category>next-js</category><category>tailwind</category><category>aws</category><category>CI/CD</category>
+  </item>
+
+  <item>
+    <guid>https://walt.dev/blog/nested-route/introducing-multi-part-posts-with-nested-routing</guid>
+    <title>Introducing Multi-part Posts with Nested Routing</title>
+    <link>https://walt.dev/blog/nested-route/introducing-multi-part-posts-with-nested-routing</link>
+    <description>The blog template supports posts in nested sub-folders. This can be used to group posts of similar content e.g. a multi-part course. This post is itself an example of a nested route!</description>
+    <pubDate>Sun, 02 May 2021 00:00:00 GMT</pubDate>
+    <author>wpniederer@gmail.com (Walt Niederer)</author>
+    <category>multi-author</category><category>next-js</category><category>feature</category>
+  </item>
+
+  <item>
+    <guid>https://walt.dev/blog/github-markdown-guide</guid>
+    <title>Markdown Guide</title>
+    <link>https://walt.dev/blog/github-markdown-guide</link>
+    <description>Markdown cheatsheet for all your blogging needs - headers, lists, images, tables and more! An illustrated guide based on GitHub Flavored Markdown.</description>
+    <pubDate>Fri, 11 Oct 2019 00:00:00 GMT</pubDate>
+    <author>wpniederer@gmail.com (Walt Niederer)</author>
+    <category>github</category><category>guide</category>
+  </item>
+
+    </channel>
+  </rss>
