@@ -29,11 +29,15 @@
   </url>
 
   <url>
+    <loc>https://walt.dev/tags/book</loc>
+  </url>
+
+  <url>
     <loc>https://walt.dev/tags/cicd</loc>
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/book</loc>
+    <loc>https://walt.dev/tags/code</loc>
   </url>
 
   <url>
@@ -45,11 +49,11 @@
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/code</loc>
+    <loc>https://walt.dev/tags/github</loc>
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/github</loc>
+    <loc>https://walt.dev/tags/holiday</loc>
   </url>
 
   <url>
@@ -57,7 +61,7 @@
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/holiday</loc>
+    <loc>https://walt.dev/tags/images</loc>
   </url>
 
   <url>
@@ -74,10 +78,6 @@
 
   <url>
     <loc>https://walt.dev/tags/next-js</loc>
-  </url>
-
-  <url>
-    <loc>https://walt.dev/tags/images</loc>
   </url>
 
   <url>
