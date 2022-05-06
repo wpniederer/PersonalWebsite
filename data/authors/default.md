@@ -4,7 +4,7 @@ avatar: /static/images/avatar.png
 occupation: Senior Platform Engineer
 company: ConsumerTrack, Inc.
 email: wpniederer@gmail.com
-linkedin: https://www.linkedin.com/in/wniederer
+linkedin: https://www.linkedin.com/in/walter-niederer/
 github: https://github.com/wpniederer
 ---
 
