@@ -4,7 +4,7 @@ const projectsData = [
     description: ` This blog itself is a project I've wanted to do for a long time.
     Read more details about the frameworks, tools, hosting solution, and infrastructure
     down below!`,
-    imgSrc: '/static/images/google.png',
+    imgSrc: '/static/images/my_blog.png',
     href: '/blog/about-site',
   },
   {
