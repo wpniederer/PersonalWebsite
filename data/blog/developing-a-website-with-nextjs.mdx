@@ -1,0 +1,32 @@
+---
+title: Developing a Website with Next.js
+date: '2022-05-06'
+tags: ['Next-js', 'AWS', 'Vercel', 'Web-dev', 'building-a-website']
+draft: false
+summary: Next.js is a powerful framework, but there are some big caveats to consider if you aren't interested in hosting in Vercel.
+images: []
+layout: PostLayout
+canonicalUrl: developing-website-with-next-js
+---
+
+<TOCInline toc={props.toc} asDisclosure toHeading={3} />
+
+I finally deployed my website as you, the reader, can now see. As previouly stated in the [first post](/blog/about-this-site) on my site, I chose Next.js as the framework since I want to learn how to better assist my coworkers as a Platform Engineer. I can say I definitely have a far better understanding of Next.js and a newfound respect for the incredible work my coworkers did on getting Next.js to function with [AWS Lambda](https://aws.amazon.com/lambda/) without using existing solutions.
+
+Overall, I think Next.js is a fanastic framework, it is easy to develop with, it's performant with my website returning PageSpeed scores of 94 for Mobile and 100 for Desktop, and has solid documentation and community support. With that being said, Vercel makes it a pain to deploy to anywhere but its own SaaS service, **especially** if you want to use any other serverless offering.
+
+## The Good
+
+I was able to spin up a blog and start developing locally with Next.js in roughly 5 minutes. After running through their [course](https://nextjs.org/learn/foundations/about-nextjs?utm_source=next-site&utm_medium=nav-cta&utm_campaign=next-website), I was able to confidently make changes to that starter blog with the help of their documentation and the Next.js community. Then, when I realized that the blog template I used didn't provide enough of a foundation for me to provide a good UI/UX _twice_, switching to a new template and migrating my existing blog posts was effortless since they all grabbed data from the same directories.
+
+The exposure to React is also a nice bonus of using Next.js. I've used React for a previous attempt of making this personal website about 3 years ago, but was unsuccessful in moving past the tutorial phase. Now, I feel more comfortable with React than I ever was struggling through those tutorials.
+
+Finally, it's incredible how fast Next.js is, even in inexperienced hands. I wasn't expecting to get the PageSpeed scores I did and I was sure there would be some glaring performance issues, especially since this blog is hosted in AWS and not Vercel.
+
+## The Bad
+
+There were very few bad aspects I ran into with Next.js, however those few issues I ran into are truly awful, which you can read more about in the **The Ugly** section of this post. Anyways there are couple issues that I found strange, one being the difficulty in switching from having all my code in the root directory `\` to `src`. I thought it would be as simple as moving the desired files except for `public` into `src`, then updating the various config files and imports to reflect the directory change. I was able to successfully do this without any issues running a development server, but when running `yarn build` I would get obscure and difficult to debug errors. Eventually I decided it wasn't worth the effort, at least for now. Once I have more experience with Next I'll go back and resolve those issues.
+
+## The Ugly
+
+With much anticipation, it is time to talk about the worst aspects of Next.js - all of which aren't related to developing with the language itself, but instead hosting a site built with it.
