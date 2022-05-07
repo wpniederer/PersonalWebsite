@@ -29,4 +29,42 @@ There were very few bad aspects I ran into with Next.js, however those few issue
 
 ## The Ugly
 
-With much anticipation, it is time to talk about the worst aspects of Next.js - all of which aren't related to developing with the language itself, but instead hosting a site built with it.
+With much anticipation, it is time to talk about the worst aspect of Next.js - all of which aren't related to developing with the language itself, but instead hosting a site built with it. Now, you can use Vercel which handles everything: it enables a developer to focus on just UI/UX which does make sense. However, the problem that I have is how Vercel makes it difficult to host a Next.js solution anywhere else, especially given I want to build my own full stack solution in AWS. I saw many solutions involving hosting the site in an [EC2](https://aws.amazon.com/ec2/), but this a bad solution to a problem that shouldn't exist. The cost of hosting a website in a traditional server (EC2) versus is a serverless solution is several order of magnitude more effort to maintain **AND** expensive for a low traffic site.
+
+Anyways, I'll focus on AWS and the details of the infrastructure in another post. Now I want to mention the solutions I researched that **do** work with AWS and what advantages and disadvantages they had.
+
+1. **Vercel**: Built for deploying and hosting Next.js by the company that owns Next.js.
+   - Advantages
+     - Allows a developer to focus on frontend development
+     - Supports latest Next.js version
+     - Supports all Next.js features
+   - Disadvantages
+     - Cost for high traffic sites
+     - Limited control over underlying infrastrucutre.
+2. **EC2**: A virtual server hosted in AWS.
+   - Advantages
+     - Can be more cost effective for high traffic sites _if_ your website can run on a smaller EC2.
+     - More control over the underlying OS.
+   - Disadvantages
+     - Higher cost for low traffic sites.
+     - Need to keep up with maintenance related tasks such as security updates, managing and building a secure [VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html).
+3. [AWS Amplify](https://aws.amazon.com/amplify/): Very similar to what Vercel offers, but hosted in AWS.
+   - Advantages
+     - Allows a developer to focus on frontend development.
+     - Similar to Vercel, but with advantage of lower costs for high traffic websites.
+   - Disadvantages
+     - Limited control over underlying infrastructure.
+     - Slow builds times.
+     - No support for Next.js 12
+     - Additional costs to build application
+4. [Serverless Next.js Component](https://www.serverless.com/plugins/serverless-nextjs-plugin): A zero configuration Next.js serverless component for AWS Lambda@Edge aiming for full feature parity.
+   - Advantages
+     - Truly is zero configuration, allowing a developer to focus on frontend development
+     - Quick build and deploy times since you can run the commands in a GitHub action or locally
+     - No additional cost to build
+   - Disadvantages
+     - No support for Next.js 12
+     - Is not at feature parity with Next 10 or 11
+5. [Terraform Next.js module for AWS](https://github.com/milliHQ/terraform-aws-next-js): To be discussed in the AWS and infrastructure post. This is ultimately what I decided to use.
+
+Initially, I tried to build my own solution by adapting a [next-serverless](https://github.com/wpniederer/next-serverless) package to work with Next.js. Unfortunately, I do not have the understanding of Next to build this solution out completely. Shortly after that, I came to the conclusion that it would be a project in itself to make Next.js work in AWS: this is why there are 4 solutions above which focus only on simplifying the deployment of a Next.js site to it.
