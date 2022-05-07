@@ -8,7 +8,7 @@
       <managingEditor>wpniederer@gmail.com (Walt Niederer)</managingEditor>
       <webMaster>wpniederer@gmail.com (Walt Niederer)</webMaster>
       <lastBuildDate>Fri, 06 May 2022 00:00:00 GMT</lastBuildDate>
-      <atom:link href="https://walt.dev/tags/aws/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://walt.dev/tags/vercel/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
     <guid>https://walt.dev/blog/developing-a-website-with-nextjs</guid>
@@ -18,16 +18,6 @@
     <pubDate>Fri, 06 May 2022 00:00:00 GMT</pubDate>
     <author>wpniederer@gmail.com (Walt Niederer)</author>
     <category>Next-js</category><category>AWS</category><category>Vercel</category><category>Web-dev</category><category>building-a-website</category>
-  </item>
-
-  <item>
-    <guid>https://walt.dev/blog/about-this-site</guid>
-    <title>About this site</title>
-    <link>https://walt.dev/blog/about-this-site</link>
-    <description>Talking about my goals for this site, as well as how I initially planned to build it.</description>
-    <pubDate>Thu, 05 May 2022 00:00:00 GMT</pubDate>
-    <author>wpniederer@gmail.com (Walt Niederer)</author>
-    <category>next-js</category><category>tailwind</category><category>aws</category><category>CI/CD</category>
   </item>
 
     </channel>

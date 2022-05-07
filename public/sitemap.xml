@@ -29,7 +29,7 @@
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/cicd</loc>
+    <loc>https://walt.dev/tags/building-a-website</loc>
   </url>
 
   <url>
@@ -37,11 +37,11 @@
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/feature</loc>
+    <loc>https://walt.dev/tags/cicd</loc>
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/features</loc>
+    <loc>https://walt.dev/tags/feature</loc>
   </url>
 
   <url>
@@ -49,15 +49,23 @@
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/guide</loc>
-  </url>
-
-  <url>
     <loc>https://walt.dev/tags/code</loc>
   </url>
 
   <url>
+    <loc>https://walt.dev/tags/features</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/guide</loc>
+  </url>
+
+  <url>
     <loc>https://walt.dev/tags/holiday</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/images</loc>
   </url>
 
   <url>
@@ -77,15 +85,7 @@
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/images</loc>
-  </url>
-
-  <url>
     <loc>https://walt.dev/tags/next-js-tailwind-aws-ci-cd</loc>
-  </url>
-
-  <url>
-    <loc>https://walt.dev/tags/reflection</loc>
   </url>
 
   <url>
@@ -93,7 +93,19 @@
   </url>
 
   <url>
+    <loc>https://walt.dev/tags/reflection</loc>
+  </url>
+
+  <url>
     <loc>https://walt.dev/tags/tailwind</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/vercel</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/web-dev</loc>
   </url>
 
   <url>
