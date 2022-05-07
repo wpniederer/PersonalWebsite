@@ -1,4 +1,11 @@
 terraform {
+  backend "s3" {
+    bucket  = "walters-playground-terraform"
+    key     = "PersonalWebsite/prod/terraform.tfstate"
+    region  = "us-west-2"
+    encrypt = true
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
