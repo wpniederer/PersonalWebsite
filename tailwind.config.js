@@ -163,6 +163,28 @@ module.exports = {
           },
         },
       }),
+      keyframes: {
+        shrink: {
+          '0% , 100%': {
+            height: '0.75rem',
+          },
+          '50%': {
+            height: '0.375rem',
+          },
+        },
+        expand: {
+          '0% , 100%': {
+            height: '0.375rem',
+          },
+          '50%': {
+            height: '0.75rem',
+          },
+        },
+      },
+      animation: {
+        shrink: 'shrink ease-in-out 1.5s infinite',
+        expand: 'expand ease-in-out 1.5s infinite',
+      },
     },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],

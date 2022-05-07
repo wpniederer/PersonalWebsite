@@ -41,19 +41,19 @@
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/feature</loc>
-  </url>
-
-  <url>
-    <loc>https://walt.dev/tags/github</loc>
-  </url>
-
-  <url>
     <loc>https://walt.dev/tags/code</loc>
   </url>
 
   <url>
+    <loc>https://walt.dev/tags/feature</loc>
+  </url>
+
+  <url>
     <loc>https://walt.dev/tags/features</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/github</loc>
   </url>
 
   <url>
