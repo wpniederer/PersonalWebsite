@@ -14,7 +14,7 @@
     <guid>https://walt.dev/blog/hosting-a-nextjs-blog-in-aws</guid>
     <title>Hosting a Next.js blog in AWS</title>
     <link>https://walt.dev/blog/hosting-a-nextjs-blog-in-aws</link>
-    <description>Hosting in AWS has many advantages, especially in terms of cost and control, but there are somchallenges with going down tthat route.</description>
+    <description>Time to talk about AWS and the infrastructure that makes this blog available to you!</description>
     <pubDate>Sat, 07 May 2022 00:00:00 GMT</pubDate>
     <author>wpniederer@gmail.com (Walt Niederer)</author>
     <category>next-js</category><category>aws</category><category>building-a-website</category><category>web-dev</category>

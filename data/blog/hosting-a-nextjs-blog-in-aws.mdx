@@ -9,3 +9,193 @@ layout: PostLayout
 canonicalUrl: hosting-next-js-aws
 authors: ['default']
 ---
+
+<TOCInline toc={props.toc} asDisclosure toHeading={2} />
+
+Building infrastructure is something I have a great deal of experience doing, especially using Terraform (blog post about Terraform coming soon after this one...), so natually when I decided to finally do this project the only two givens I had about the stack is that it I would use AWS to host it and Terraform to manage the infrastructure. What I didn't anticipate how challenging it would be to make Next.js work in AWS.
+
+## Why AWS
+
+I work as a [Platform Engineer](https://www.getambassador.io/resources/rise-of-cloud-native-engineering-organizations/) and have obtained AWS associate certifications for both [Solution Architect](https://aws.amazon.com/certification/certified-solutions-architect-associate/) and [SysOps Admin](https://aws.amazon.com/certification/certified-sysops-admin-associate/), which is a roundabout way of expressing I enjoy working with and learning about AWS.
+
+AWS is an fantastic service that provides a great deal of flexibility and options for building a solution to whatever problem you may have whether that be hosting a website, building and deploying ML models, or creating a low latency gaming streaming service. In my case I wanted to build a serverless website and ultimately landed on using these services
+
+- [Lambda](https://aws.amazon.com/lambda/), a Serverless solution for handling any dynamic components and invoking APIs (like the NowPlaying component at the bottom of this page).
+- An [API Gateway](https://aws.amazon.com/api-gateway/) for routing requests to my Lambda.
+  - Note: In my first blog post I stated I was planning on using an [Application Load Balancer](https://aws.amazon.com/elasticloadbalancing/application-load-balancer/), but after more research it was clear that API GW is the more cost effective choice for a low traffic site.
+- [S3](https://aws.amazon.com/s3/) for storing static assests
+- [CloudFront](https://aws.amazon.com/cloudfront/) as my CDN for handling all incoming traffic and serving static assets.
+
+That being said, unless you are passionate or have an interest in building infrastructure I would not recommend hosting a serverless Next.js site in AWS. While it can be made a trivial task with several "no config" tools to quickly spin up a Next.js built website, there are many caveats when it comes to feature support and performance.
+
+## The Challenges
+
+Next.js has made it clear that they want developers to use Vercel as the hosting platform for Next.js apps. Hosting anywhere else requires a deep understanding how Next.js works under the hood and knowledge of which services are needed in the hosting platform to have those critical components work well.
+
+I was first clued into how difficult it'd be after my first attempt to push a test version of my blog to a Lambda when I realized I didn't code a [handler](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html); this led me down a rabit hole that got deeper as I did more research. It even led to me publishing my [first npm package](https://www.npmjs.com/package/nextjs12-serverless) and going back and forth debugging both the code for the website and that package. I spent many hours trying to get it to work, but eventually I came to the realization that architecting a solution to the Next.js serverless hosting problem was a project on its own sooo I decided to use terraform module to make it so I could have this blog up in days instead of months. One day, when I have more experience with Next.js I will build my own solution...
+
+## How I Learned to Stop Worrying and Love the Terraform Next.js module for AWS
+
+There were several solutions to deploying Next.js I researched and evaluated, but ultimately I chose the [Terraform Next.js module for AWS](https://github.com/milliHQ/terraform-aws-next-js) as the tool I wanted to use for deploying walt.dev to AWS. It provided the core services I know a website needs to perform well and other interesting features such as an [SQS](https://aws.amazon.com/sqs/) queue for sending invalidations to the CloudFront. In additition it is mostly feature complete with Next.js and even works with Next.js 12, though not all features new to that version are supported yet. Using the Terraform Next.js Module helped me get the website across the finish line and also taught me more about how Next works at a lower level.
+
+The file that represents all of my infrastructure as code is `main.tf`, see below for the code as of version `2.1.1` of my site.
+
+```json
+terraform {
+  backend "s3" {
+    bucket  = "walters-playground-terraform"
+    key     = "PersonalWebsite/prod/terraform.tfstate"
+    region  = "us-west-2"
+    encrypt = true
+  }
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
+
+variable "aws_region" {
+  type    = string
+  default = "us-west-2"
+}
+
+variable "env" {
+  type    = string
+  default = "prod"
+}
+
+variable "tag" {
+  type = string
+}
+
+variable "app_name" {
+  type    = string
+  default = "personal-website"
+}
+
+variable "tags" {
+  type = map(string)
+  default = {
+    AppName = "personal-website"
+    Version = "2.1.1"
+  }
+}
+
+variable "cloudfront_alias" {
+  type    = list(string)
+  default = ["walt.dev"]
+}
+
+provider "aws" {
+  region = "us-west-2"
+}
+
+module "tf_next" {
+  source = "milliHQ/next-js/aws"
+
+  next_tf_dir                         = var.next_tf_dir
+  deployment_name                     = var.app_name
+  lambda_runtime                      = "nodejs14.x"
+  tags                                = var.tags
+  cloudfront_minimum_protocol_version = "TLSv1.2_2021"
+  cloudfront_aliases                  = var.cloudfront_alias
+  cloudfront_acm_certificate_arn      = module.cloudfront_cert.acm_certificate_arn
+
+  providers = {
+    aws.global_region = aws.global_region
+  }
+}
+
+##### tf_next Vars #####
+
+provider "aws" {
+  alias  = "global_region"
+  region = "us-east-1"
+}
+
+
+
+variable "next_tf_dir" {
+  type    = string
+  default = "../.next-tf/"
+
+}
+
+###########
+# Variables
+###########
+
+variable "custom_domain" {
+  description = "Your custom domain"
+  type        = string
+  default     = "walt.dev"
+}
+
+variable "custom_domain_zone_name" {
+  description = "The Route53 zone name of the custom domain"
+  type        = string
+  default     = "walt.dev."
+}
+
+###########
+# Locals
+###########
+
+locals {
+  aliases = [var.custom_domain]
+  # If you need a wildcard domain(ex: *.example.com), you can add it like this:
+  # aliases = [var.custom_domain, "*.${var.custom_domain}"]
+}
+
+#######################
+# Route53 Domain record
+#######################
+
+data "aws_route53_zone" "custom_domain_zone" {
+  name = var.custom_domain_zone_name
+}
+
+resource "aws_route53_record" "cloudfront_alias_domain" {
+  for_each = toset(local.aliases)
+
+  zone_id = data.aws_route53_zone.custom_domain_zone.zone_id
+  name    = each.key
+  type    = "A"
+
+  alias {
+    name                   = module.tf_next.cloudfront_domain_name
+    zone_id                = module.tf_next.cloudfront_hosted_zone_id
+    evaluate_target_health = false
+  }
+}
+
+##########
+# SSL Cert
+##########
+
+module "cloudfront_cert" {
+  source  = "terraform-aws-modules/acm/aws"
+  version = "~> 3.0"
+
+  domain_name               = var.custom_domain
+  zone_id                   = data.aws_route53_zone.custom_domain_zone.zone_id
+  subject_alternative_names = slice(local.aliases, 1, length(local.aliases))
+
+  tags = {
+    Name = "CloudFront ${var.custom_domain}"
+  }
+
+  providers = {
+    aws = aws.global_region
+  }
+}
+```
+
+All of the above we be broken down and discussed in more detail in the next blog post focused on Terraform and using [Scalr](https://www.scalr.com/).
+
+## Remaining Issues
+
+Unfortunately, the Terraform Next.js module for AWS doesn't appear to be working perfectly. There's an outstanding issue with one of the SSR Lambdas that I've been working through, essentially, the Lambda cannot find the context for various files that I've confirmed is bundled with the artifact that the Terraform Next.js module builds. From the users perspective, they will see 500s and 503s when they hover over links on my site. I've been digging into that issue for the past few days and have been preparing some steps to reproduce the issue so I can present it in a GitHub Issue to the developers of the tool if I'm unable to solve it myself.
