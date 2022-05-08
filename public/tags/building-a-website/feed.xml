@@ -7,9 +7,19 @@
       <language>en-us</language>
       <managingEditor>wpniederer@gmail.com (Walt Niederer)</managingEditor>
       <webMaster>wpniederer@gmail.com (Walt Niederer)</webMaster>
-      <lastBuildDate>Fri, 06 May 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Sat, 07 May 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://walt.dev/tags/building-a-website/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://walt.dev/blog/hosting-a-nextjs-blog-in-aws</guid>
+    <title>Hosting a Next.js blog in AWS</title>
+    <link>https://walt.dev/blog/hosting-a-nextjs-blog-in-aws</link>
+    <description>Time to talk about AWS and the infrastructure that makes this blog available to you!</description>
+    <pubDate>Sat, 07 May 2022 00:00:00 GMT</pubDate>
+    <author>wpniederer@gmail.com (Walt Niederer)</author>
+    <category>next-js</category><category>aws</category><category>building-a-website</category><category>web-dev</category>
+  </item>
+
   <item>
     <guid>https://walt.dev/blog/developing-a-website-with-nextjs</guid>
     <title>Developing a Website with Next.js</title>
