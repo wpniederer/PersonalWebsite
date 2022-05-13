@@ -1,0 +1,27 @@
+---
+title: Trying out Scalr for Terraform
+date: '2022-05-13'
+tags: ['AWS', 'Scalr', 'Terraform', 'CI/CD', 'building-a-website']
+draft: false
+summary: When I was researching various ways to handle my state files for Terraform and how to built them into a CI/CD pipeline, I came across Scalr - a cloud solution for Terraform.
+images: []
+layout: PostLayout
+canonicalUrl: trying-out-scalr
+authors: ['default']
+---
+
+When I was building this project out I knew that I needed to look into various ways to handle CD and Terraform. Initially I wanted to have the terraform plan and apply handled by a [GitHub Action](https://github.com/features/actions), but quickly came across cloud solutions such as [Terraform Cloud](https://cloud.hashicorp.com/products/terraform) and [Scalr](https://www.scalr.com/). I found Scalr's free tier to be generous and the solution looked great, so I decided to move forward with it.
+
+To start, Scalr was fantastic and flexible. Not only could I see a terraform plan in my pull requests, but I could also run Terraform plans in my CLI as I normally would and it would all be funneled through Scalr's intuitive UI. Sclar made it easy to quickly understand what infrastructure my changes would create, modify or destroy. However, it was noticeably much slower than running Terraform locally, waiting for resources to spin up in the Scalr's cloud took several minutes longer.
+
+#### Running a Plan in Scalr
+
+![Example of Scalr Plan UI](/static/images/scalr/scalr-ui-tf-plan.png)
+
+The real issues started when it was time to deploy all the [infrastructure](/blog/hosting-a-nextjs-blog-in-aws#why-aws). I quickly ran against the resource limits of the free tier (0.5 CPU, 256 MB RAM) and was unable to run the apply for my infrastructure. Now, I completely understand and it's easy enough to switch the apply to run locally, but the issue I had was trying to destroy what Scalr created - destroys are also under those same limits. This made destroying my infrastructure much more difficult than it should be and required several applies plus a manual check to make sure everything was destroyed; Scalr should not apply limits to a Terraform destroy.
+
+#### Frustration when Running Terraform Destroy
+
+![Example of Scalr Plan UI](/static/images/scalr/trying-to-destroy.png)
+
+Overall, I still recommend giving Scalr a shot, especially for simple infrastructure. The UI improves the readability of the output from a terraform plan plus it easy to integrate with GitHub and a local CLI.
