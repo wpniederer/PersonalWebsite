@@ -25,6 +25,10 @@
   </url>
 
   <url>
+    <loc>https://walt.dev/tags/cicd</loc>
+  </url>
+
+  <url>
     <loc>https://walt.dev/tags/book</loc>
   </url>
 
@@ -34,10 +38,6 @@
 
   <url>
     <loc>https://walt.dev/tags/canada</loc>
-  </url>
-
-  <url>
-    <loc>https://walt.dev/tags/cicd</loc>
   </url>
 
   <url>
@@ -53,11 +53,11 @@
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/guide</loc>
+    <loc>https://walt.dev/tags/github</loc>
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/github</loc>
+    <loc>https://walt.dev/tags/guide</loc>
   </url>
 
   <url>
