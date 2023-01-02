@@ -55,7 +55,7 @@ module "tf_next" {
 
   next_tf_dir                         = var.next_tf_dir
   deployment_name                     = var.app_name
-  lambda_runtime                      = "nodejs14.x"
+  lambda_runtime                      = "nodejs16.x"
   tags                                = var.tags
   cloudfront_minimum_protocol_version = "TLSv1.2_2021"
   cloudfront_aliases                  = var.cloudfront_alias
