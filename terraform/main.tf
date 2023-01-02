@@ -37,7 +37,7 @@ variable "tags" {
   type = map(string)
   default = {
     AppName = "personal-website"
-    Version = "2.1.1"
+    Version = "3.0.0"
   }
 }
 
@@ -51,11 +51,12 @@ provider "aws" {
 }
 
 module "tf_next" {
-  source = "milliHQ/next-js/aws"
+  source  = "milliHQ/next-js/aws"
+  version = "0.13.2"
 
   next_tf_dir                         = var.next_tf_dir
   deployment_name                     = var.app_name
-  lambda_runtime                      = "nodejs14.x"
+  lambda_runtime                      = "nodejs16.x"
   tags                                = var.tags
   cloudfront_minimum_protocol_version = "TLSv1.2_2021"
   cloudfront_aliases                  = var.cloudfront_alias
