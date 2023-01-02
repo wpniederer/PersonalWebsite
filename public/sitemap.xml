@@ -25,7 +25,7 @@
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/book</loc>
+    <loc>https://walt.dev/tags/building-a-website</loc>
   </url>
 
   <url>
@@ -33,7 +33,7 @@
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/building-a-website</loc>
+    <loc>https://walt.dev/tags/book</loc>
   </url>
 
   <url>
@@ -41,11 +41,11 @@
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/code</loc>
+    <loc>https://walt.dev/tags/feature</loc>
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/feature</loc>
+    <loc>https://walt.dev/tags/code</loc>
   </url>
 
   <url>
@@ -97,10 +97,6 @@
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/scalr</loc>
-  </url>
-
-  <url>
     <loc>https://walt.dev/tags/tailwind</loc>
   </url>
 
@@ -110,6 +106,10 @@
 
   <url>
     <loc>https://walt.dev/tags/vercel</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/scalr</loc>
   </url>
 
   <url>
