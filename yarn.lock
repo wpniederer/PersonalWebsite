@@ -1113,10 +1113,10 @@
     dotenv "^8.2.0"
     superagent "3.8.1"
 
-"@millihq/tf-next-runtime@0.12.2":
-  version "0.12.2"
-  resolved "https://registry.yarnpkg.com/@millihq/tf-next-runtime/-/tf-next-runtime-0.12.2.tgz#252eae731585a4978ac5818b7f2af95535259cd3"
-  integrity sha512-0V0DfzAiQJQCQP1ViuykCmyEmET6gWw9Ouv3MHquuXSXdST9OgzeOJLzq2JX99YeqmmFTlNCSlT9QENhokYUlw==
+"@millihq/tf-next-runtime@0.13.2":
+  version "0.13.2"
+  resolved "https://registry.yarnpkg.com/@millihq/tf-next-runtime/-/tf-next-runtime-0.13.2.tgz#16473cc22d522010914543cbfec10c29aa47e627"
+  integrity sha512-hsWxKWxM3QW6TcxG4bd7GlvDOh4U2nh45HhaawmYNnG50H3Oe/eey6dFaQt7TcWm4bKdPKc9wbz5ahCy05LlLg==
 
 "@next/bundle-analyzer@12.1.4":
   version "12.1.4"
@@ -1546,10 +1546,10 @@
     "@typescript-eslint/types" "5.10.1"
     eslint-visitor-keys "^3.0.0"
 
-"@vercel/build-utils@2.12.1":
-  version "2.12.1"
-  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-2.12.1.tgz#479a7eb0111985ff437d77dd395bb9ba6d108c95"
-  integrity sha512-85FUGmNQWL+gWORGIfW2amNeDt3vBgliZ51j3D9s+2qcAv+Li+ghLfzjoP5w5E+DhO8OxHfy53WbqR5aprAWEA==
+"@vercel/build-utils@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-2.17.0.tgz#18a24eeaf765fc97c7aed822a6ad83fa825f4c50"
+  integrity sha512-eKHx3nW5MJ21xQC9RQrm+OthmHiV0PHr6bRpJAhsXryE/H6fbNqr1ZxOAQJpq2MaoKzEA/6Lt7J4TjJLd4pkqA==
 
 "@vercel/frameworks@^0.0.15":
   version "0.0.15"
@@ -7374,13 +7374,13 @@ text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-tf-next@^0.12.2:
-  version "0.12.2"
-  resolved "https://registry.yarnpkg.com/tf-next/-/tf-next-0.12.2.tgz#6fa51e5b0f314734c79c190c97acb142f547e888"
-  integrity sha512-Vwyk9rmp2W0lL4UBDg3H+yOsEbIkH5VbdvQbrOtomOQBan2NCMggXNwvgZh4kaQEup1Q/umwEu9Rz7uxPsF7xg==
+tf-next@^0.13.2:
+  version "0.13.2"
+  resolved "https://registry.yarnpkg.com/tf-next/-/tf-next-0.13.2.tgz#98a250f948dbc6423f24ec93b52c7ba9bf38b915"
+  integrity sha512-M3y3u4LUrey3dCIzsG5J40tJHpjIPnODnAXTUEjD0UTKuVW5VLJ/7+wmqtQ5+w0hNye/jCRTGsuK1RbvLSUs5A==
   dependencies:
-    "@millihq/tf-next-runtime" "0.12.2"
-    "@vercel/build-utils" "2.12.1"
+    "@millihq/tf-next-runtime" "0.13.2"
+    "@vercel/build-utils" "2.17.0"
     "@vercel/frameworks" "^0.0.15"
     "@vercel/routing-utils" "^1.10.1"
     archiver "^5.3.0"

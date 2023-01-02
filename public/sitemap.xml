@@ -25,15 +25,7 @@
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/cicd</loc>
-  </url>
-
-  <url>
     <loc>https://walt.dev/tags/book</loc>
-  </url>
-
-  <url>
-    <loc>https://walt.dev/tags/building-a-website</loc>
   </url>
 
   <url>
@@ -41,15 +33,23 @@
   </url>
 
   <url>
+    <loc>https://walt.dev/tags/building-a-website</loc>
+  </url>
+
+  <url>
+    <loc>https://walt.dev/tags/cicd</loc>
+  </url>
+
+  <url>
     <loc>https://walt.dev/tags/code</loc>
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/feature</loc>
+    <loc>https://walt.dev/tags/features</loc>
   </url>
 
   <url>
-    <loc>https://walt.dev/tags/features</loc>
+    <loc>https://walt.dev/tags/feature</loc>
   </url>
 
   <url>
@@ -109,14 +109,14 @@
   </url>
 
   <url>
+    <loc>https://walt.dev/tags/writings</loc>
+  </url>
+
+  <url>
     <loc>https://walt.dev/tags/vercel</loc>
   </url>
 
   <url>
     <loc>https://walt.dev/tags/web-dev</loc>
-  </url>
-
-  <url>
-    <loc>https://walt.dev/tags/writings</loc>
   </url>
 </urlset>
